@@ -27,7 +27,7 @@ public class Account {
         }
 
      /**The method for depositing amount and 
-      * updating balanc
+      * updating balance
      * @param amount*/
         public void credit(double amount)
         {
