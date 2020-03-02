@@ -27,7 +27,8 @@ public class Account {
         }
 
      /**The method for depositing amount and 
-      * updating balance*/
+      * updating balanc
+     * @param amount*/
         public void credit(double amount)
         {
             balance=getBalance()+amount;
@@ -56,7 +57,15 @@ public class Account {
         {
             return interestRate;
         }
-
+        public void setInterestRate()
+        {
+            this.interestRate = .03;
+        }
+        public double finalBalance()
+        {
+            setInterestRate();
+            return balance*interestRate*1/12;
+        }
     /**user is the read only field
      * @return the user
      */

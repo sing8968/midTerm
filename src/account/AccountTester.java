@@ -21,14 +21,20 @@ public class AccountTester {
         Scanner sc=new Scanner(System.in);
         double bal=sc.nextDouble();
         
+        while(bal<50)
+        {
+            System.out.println("Initial Balance can not be less than 50 enter the amount greater than 50");
+            bal=sc.nextDouble();
+        }
         System.out.println("Please enter the unique user name:");
         sc.nextLine();
         String user=sc.nextLine();
         
         Account a=new Account(bal,user);
         ac[0]=a;
-             
+        System.out.println("Account created");
         System.out.println("The balance is: "+a.getBalance());  
         System.out.println("The InterestRate per month is "+a.getInterestRate());
+        System.out.println("Final Balance" + a.finalBalance());//We can use this method when interest rate is 3%
     }
 }
